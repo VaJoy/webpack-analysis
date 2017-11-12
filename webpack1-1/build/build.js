@@ -6,12 +6,14 @@ var vajoy =   // 可以在客户端执行 vajoy.test() 试试
             function require(moduleId) {
                 if (installedModules[moduleId])
                     return installedModules[moduleId].exports;
-                // 客户端是没有 Node 侧的 module/module.exports 的
-                // 需要定义一个，来解析模块代码中的 module/module.exports
+                // 客户端是没有 Node 侧的 module/module.exports 的，
+                // 因此需要初始化一个 module 对象，扔给各模块内部去加工
                 var module = installedModules[moduleId] = {
                     exports: {}
                 };
+                //将上面初始化的 module 对象扔进去并执行对应模块代码
                 modules[moduleId](module, module.exports, require);
+                // 返回模块对外接口
                 return module.exports;
             }
             // 定义 require.ensure 方法
