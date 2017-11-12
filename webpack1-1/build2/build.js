@@ -37,10 +37,10 @@
 /******/({a:".build.js",b:"webpackJsonp",c:"",
 /******/0: function(module, exports, require) {
 
-var a = require(2);
-var b = require(1);
+var a = require(1);
+var b = require(2);
 require.ensure(1, function(require) {
-    require(1).xyz();
+    require(2).xyz();
     var d = require(4);
 });
 
@@ -52,15 +52,15 @@ module.exports = {
 /******/
 /******/1: function(module, exports, require) {
 
-exports.xyz = function(){
-    console.log(1234)
-};
+console.log('a');
 
 /******/},
 /******/
 /******/2: function(module, exports, require) {
 
-// module a
+exports.xyz = function(){
+    console.log('b module output')
+};
 
 /******/},
 /******/
