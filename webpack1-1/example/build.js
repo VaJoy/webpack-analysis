@@ -1,3 +1,6 @@
+// 你可以直接通过
+// node example/build [ARGVS]
+// 来执行 webpack　打包
 var cp = require('child_process');
 
 var argv = process.argv;

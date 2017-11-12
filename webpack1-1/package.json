@@ -16,5 +16,8 @@
 	},
 	"main": "lib/webpack.js",
 	"bin": "./bin/webpack.js",
+	"scripts": {
+		"test": "node node_modules/vows/bin/vows"
+	},
 	"licence": "MIT"
 }
