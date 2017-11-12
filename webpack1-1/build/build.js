@@ -1,4 +1,4 @@
-var vajoy =   // 可以在客户端执行 vajoy.
+var vajoy =   // 可以在客户端执行 vajoy.test() 试试
     (function (document, undefined) {
         return function (modules) {
             var installedModules = {};
